@@ -1,7 +1,5 @@
 /* Start home page call to action */
 .call-to-action{
-    padding-top: calc(var(--section-padding) / 2);
-    padding-bottom: calc(var(--section-padding) / 2);
     text-align: center;
   }
 
@@ -11,7 +9,7 @@
     background-size: cover;
     position: relative;
     color: var(--text-color);
-    border-radius: 5px;
+    border-radius: 5px; 
   }
 
   .call-to-action::before{

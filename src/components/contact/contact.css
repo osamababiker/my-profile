@@ -28,7 +28,7 @@
     } 
   }
 
-  .contact-me h3::after{
+  .contact-me h3::after{ 
     content: '';
     position: absolute;
     left: 50%;
