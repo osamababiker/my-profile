@@ -1,9 +1,9 @@
 import React from 'react';
 import './header.css';
 import Logo from '../../assets/images/logo.jpeg';
-import LightbulbIcon from '@iconscout/react-unicons/icons/uil-lightbulb';
+import GlassesimojiIcon from '../../assets/images/icons/glasses.png';
 import FileDownloadIcon from '@iconscout/react-unicons/icons/uil-file-download';
-import HeartIcon from '../../assets/images/heart.png';
+import HeartIcon from '../../assets/images/icons/heart.png';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 
@@ -100,9 +100,9 @@ const Header = () => {
               more than digital product you need to build creative inovative wow
               product
             </p>
-            <a href="#contact-me" className="btn btn-main mt-4">
-              Let us build your next wow <LightbulbIcon/>
-            </a>
+            <Link className='btn btn-main landing-contact-btn mt-4' to="contact-me" spy={true} smooth={true}>
+              Let us build your next wow <img src={GlassesimojiIcon} alt="" />
+            </Link>
         </div>
     </section>
   </header>

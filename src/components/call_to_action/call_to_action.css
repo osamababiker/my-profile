@@ -56,13 +56,12 @@
   }
 
   .call-to-action .actions a{
-    background-color: var(--purple-color);
-    color: white;
+    border: 1px solid var(--text-color);
   }
 
   
-  .call-to-action .actions svg{
-    color: var(--yellow-color);
+  .call-to-action .actions img{
+    width: 25px;
   }
 
   .call-to-action .actions a:hover{

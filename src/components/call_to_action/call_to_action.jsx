@@ -1,7 +1,8 @@
 import React from 'react';
 import './call_to_action.css';
-import FileDownloadIcon from '@iconscout/react-unicons/icons/uil-file-download';
-import ContactIcon from '@iconscout/react-unicons/icons/uil-at';
+import HeartEmojiIcon from '../../assets/images/icons/heartemoji.png';
+import HumbleEmojiIcon from '../../assets/images/icons/humble.png';
+import { Link } from 'react-scroll';
 
 const CallToAction = () => {
     return (
@@ -10,8 +11,10 @@ const CallToAction = () => {
             <h3> Let us talk your next innovation </h3>
             <p> feal free to contact me so we can discuss your next innovation ,  together we can build wow things </p>
             <div className="actions"> 
-                <a className="btn" href="contact">Let us talk <ContactIcon /> </a>
-                <a className="btn" href="cv.pdf">Download my Resume <FileDownloadIcon /> </a>
+                <Link style={{ cursor: 'pointer' }} to="contact-me" className='btn'>
+                    Let us talk  <img src={HeartEmojiIcon} alt="Heart Emoji Icon" /> 
+                </Link>
+                <a download className="btn" href="cv.pdf">Download my Resume <img src={HumbleEmojiIcon} alt="Humble imoji Icon" /></a>
             </div>
             </div>
         </section>

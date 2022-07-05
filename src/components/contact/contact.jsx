@@ -1,7 +1,12 @@
 import React from 'react';
 import './contact.css';
+import HeartIcon from '../../assets/images/icons/heart.png';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
+
+  const transition = { duration: 1, type: "spring", repeat: Infinity,  };
+
   return (
     <section className="contact-me container" id="contact-me">
         <div className="content">
@@ -37,7 +42,12 @@ const Contact = () => {
                     <textarea name="message" id="message" className="form-input" placeholder="Tell me more how i can help you"></textarea>
                   </div>
                 </div>
-                <input type="submit" className="btn contact-me-btn" value="Send Message" />
+                <motion.button 
+                 whileInView={{ scale: 1.1 }}
+                 transition={transition}
+                type="submit" className="btn contact-me-btn">
+                   Send Message <img src={HeartIcon} alt="heart icon" /> 
+                </motion.button>
               </form>
           </div>
         </div>

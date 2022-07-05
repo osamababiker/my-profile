@@ -1,9 +1,9 @@
 import React from 'react';
 import './services.css';
-import MobileAppIcon from '@iconscout/react-unicons/icons/uil-apps';
-import WebAppIcon from '@iconscout/react-unicons/icons/uil-browser';
-import IdeaIcon from '@iconscout/react-unicons/icons/uil-lightbulb-alt';
-import ContentIcon from '@iconscout/react-unicons/icons/uil-document-layout-center';
+import MobileAppIcon from '../../assets/images/mobile-app.png';
+import WebAppIcon from '../../assets/images/web-design.png';
+import IdeaIcon from '../../assets/images/idea.png';
+import ContentIcon from '../../assets/images/content.png';
 
 const Services = () => {
   return (
@@ -19,26 +19,26 @@ const Services = () => {
             <div className="row">
               <div className="col-md-3 col-sm-6 col-xs-12 mt-4">
                 <div className="box p-4">
-                  <MobileAppIcon />
-                  <p> I can Build your app </p>
+                  <img src={MobileAppIcon} alt="Mobile App Icon" />
+                  <p> Mobile Apps </p>
                 </div>
               </div>
               <div className="col-md-3 col-sm-6 col-xs-12 mt-4">
                 <div className="box p-4">
-                  <IdeaIcon />
-                  <p> I can Provide you with great business ideas </p>
+                  <img src={IdeaIcon} alt="Idea Icon" />
+                  <p>  ideas </p>
                 </div>
               </div>
               <div className="col-md-3 col-sm-6 col-xs-12 mt-4">
                 <div className="box p-4">
-                  <WebAppIcon />
-                  <p> I can Design your website </p>
+                  <img src={WebAppIcon} alt="Web App Icon" />
+                  <p> Design website </p>
                 </div>
               </div>
               <div className="col-md-3 col-sm-6 col-xs-12 mt-4">
                 <div className="box p-4">
-                  <ContentIcon />
-                  <p> I can build a brand and write content  </p>
+                  <img src={ContentIcon} alt="Content Icon" />
+                  <p> Branding  </p>
                 </div>
               </div>
             </div>
