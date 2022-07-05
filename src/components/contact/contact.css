@@ -53,11 +53,13 @@
     color: var(--text-color);
     background-color: #FAFAFA;
     border-radius: 5px;
+    cursor: pointer;
   }
 
   .contact-me .contact-form select{
     background-color: white;
     color: var(--text-color);
+    cursor: pointer;
   }
 
   .contact-me .contact-form .form-input:focus{

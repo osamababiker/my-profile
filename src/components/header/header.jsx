@@ -2,8 +2,8 @@ import React from 'react';
 import './header.css';
 import Logo from '../../assets/images/logo.jpeg';
 import GlassesimojiIcon from '../../assets/images/icons/glasses.png';
-import FileDownloadIcon from '@iconscout/react-unicons/icons/uil-file-download';
 import HeartIcon from '../../assets/images/icons/heart.png';
+import HumbleEmojiIcon from '../../assets/images/icons/humble.png';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 
@@ -68,7 +68,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link' to="my-work" spy={true} smooth={true}>
+                <Link className='nav-link' to="portfolio" spy={true} smooth={true}>
                   My Work
                 </Link>
               </li>
@@ -79,8 +79,8 @@ const Header = () => {
               <span>Abu Dhabi , UAE</span>
               <span>linkedin.com/in/osamambabiker</span>
             </address>
-            <a href="cv.pdf" className="btn side-menu-action">
-              My Resume <FileDownloadIcon />
+            <a download href="cv.pdf" className="btn side-menu-action">
+              My Resume <img src={HumbleEmojiIcon} alt="Humble imoji Icon" />
             </a>
           </div>
         </div>

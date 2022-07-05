@@ -5,27 +5,10 @@
     flex-direction: column;
     position: relative;
     text-align: center;
-    background-image: url('../../assets/images/call_to_action_bg.jpg');
-    background-position: center;
-    background-size: cover;
+    border: 1px dashed var(--text-color);
     position: relative;
     padding-bottom: calc(var(--section-padding) / 4);
 }
-
-.testimonial-wrapper > div{
-    position: relative;
-    color: black;
-}
-
-.testimonial-wrapper::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(243 243 243 / 42%);
-  }
 
 .testimonial{
     display: flex;
@@ -35,6 +18,10 @@
     padding: 3rem 7rem;
     box-shadow: var(--box-shadow);
     border-radius: 5px;
+}
+
+.testimonial:hover{
+    cursor: pointer;
 }
 
 .testimonial>img{
