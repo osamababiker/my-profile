@@ -36,7 +36,7 @@
     height: 100px;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow:  5px 5px 20px 0px rgba(119,119,119,0.54);
+    box-shadow:  0px 0px 10px 0px #616161  ;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

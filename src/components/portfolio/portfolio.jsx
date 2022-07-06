@@ -20,15 +20,19 @@ const Portfolio = () => {
         >
           <SwiperSlide>
             <img src={Work1} alt="" />
+            <h4> Keep kissing your product </h4>
           </SwiperSlide>
           <SwiperSlide>
             <img src={Work2} alt="" />
+            <h4> Timey project </h4>
           </SwiperSlide>
           <SwiperSlide>
             <img src={Work3} alt="" />
+            <h4> Bsklita </h4>
           </SwiperSlide>
           <SwiperSlide>
             <img src={Work1} alt="" />
+            <h4> feature creep </h4>
           </SwiperSlide>
         </Swiper>
       </div>

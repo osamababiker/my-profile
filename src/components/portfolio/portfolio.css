@@ -54,7 +54,16 @@
 }
 
 .portfolio img {
-  width: 19rem;
+  width: 100%;
   border-radius: 5px;
 }
+
+.portfolio h4 {
+  text-transform: uppercase;
+  padding-top: 15px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--link-color);
+}
+
 
