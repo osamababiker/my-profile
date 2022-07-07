@@ -1,8 +1,4 @@
 .portfolio {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   text-align: left;
@@ -45,12 +41,9 @@
 }
 
 /* slider */
+
 .portfolio .swiper{
     overflow: visible!important;
-}
-
-.portfolio-slider {
-  width: 100%;
 }
 
 .portfolio img {
@@ -66,4 +59,9 @@
   color: var(--link-color);
 }
 
+
+.swiper-button-next::after, .swiper-button-prev::after{
+  color: var(--link-color);
+  font-weight: normal;
+}
 

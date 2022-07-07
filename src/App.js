@@ -2,7 +2,7 @@ import './assets/css/normalize.css';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home/home';
-import SinglePost from './pages/post/single_post';
+import SinglePost from './pages/posts/single_post';
 
 function App() {
   return (
