@@ -1,6 +1,8 @@
 /* Start home page call to action */
 .call-to-action{
     text-align: center;
+    padding-top: calc(var(--section-padding) / 2);
+    padding-bottom: calc(var(--section-padding) / 2);
   }
 
   .call-to-action{

@@ -1,6 +1,7 @@
 import "./portfolio.css";
-import { Swiper, SwiperSlide } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Link } from "react-router-dom";
 import Work1 from '../../assets/images/work/01.jpg';
 import Work2 from '../../assets/images/work/02.jpg';
 import Work3 from '../../assets/images/work/03.jpg';
@@ -18,10 +19,14 @@ const Portfolio = () => {
           grabCursor={true}
           className="portfolio-slider"
         >
+         
           <SwiperSlide>
-            <img src={Work1} alt="" />
-            <h4> Keep kissing your product </h4>
+            <Link to='/posts/1'>
+              <img src={Work1} alt="" />
+              <h4> Keep kissing your product </h4>
+            </Link>
           </SwiperSlide>
+          
           <SwiperSlide>
             <img src={Work2} alt="" />
             <h4> Timey project </h4>

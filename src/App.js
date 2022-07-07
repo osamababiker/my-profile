@@ -1,23 +1,17 @@
 import './assets/css/normalize.css';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/header/header';
-import Services from './components/services/services';
-import CallToAction from './components/call_to_action/call_to_action';
-import Portfolio from './components/portfolio/portfolio';
-import Testimonial from './components/testimonials/testimonial';
-import Contact from './components/contact/contact';
-import Footer from './components/footer/footer';
+import Home from './pages/home/home';
+import SinglePost from './pages/post/single_post';
 
 function App() {
   return (
     <main>
-      <Header />
-      <Services />
-      <CallToAction />
-      <Portfolio />
-      <Testimonial />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/posts/1' element={<SinglePost />} />
+      </Routes>
+      
     </main>
   );
 }

@@ -17,11 +17,11 @@ const Contact = () => {
               <form action="">
                 <div className="row">
                   <div className="form-group col-md-6">
-                    <label for="name">Your Name</label>
+                    <label htmlFor="name">Your Name</label>
                     <input type="text" id="name" placeholder="What is your name" name="name" className="form-input" />
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="subject">How i can help you ?</label>
+                    <label htmlFor="subject">How i can help you ?</label>
                     <select id="subject" name="subject" className="form-input">
                       <option value="app">Build your app</option>
                       <option value="web">Design your website</option>
@@ -30,15 +30,15 @@ const Contact = () => {
                     </select>
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="email">Your email</label>
+                    <label htmlFor="email">Your email</label>
                     <input type="text" id="email" placeholder="Enter your email"  name="email" className="form-input" />
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="phone">Your phone</label>
+                    <label htmlFor="phone">Your phone</label>
                     <input type="tel" id="phone" placeholder="Enter your phone number"  name="phone" className="form-input" />
                   </div>
                   <div className="form-group col-md-12">
-                    <label for="message">Your message</label>
+                    <label htmlFor="message">Your message</label>
                     <textarea name="message" id="message" className="form-input" placeholder="Tell me more how i can help you"></textarea>
                   </div>
                 </div>
