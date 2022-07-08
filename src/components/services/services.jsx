@@ -15,7 +15,7 @@ const Services = () => {
               In such a days the last things people want to see is an app or website claims to make the world a better place
               <span> I can help you deal with that by building <i>new</i> <i>creative</i> <i>innovative</i> <i>WOW</i> solutions </span>
           </p>
-          <div className="services-boxes">
+          <div className="services-boxes"> 
             <div className="row">
               <div className="col-md-3 col-sm-6 col-xs-12 mt-4">
                 <div className="box p-4">

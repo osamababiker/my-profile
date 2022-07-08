@@ -1,6 +1,8 @@
 /* Start home page call to action */
 .call-to-action{
     text-align: center;
+    padding-top: calc(var(--section-padding) / 2);
+    padding-bottom: calc(var(--section-padding) / 2);
   }
 
   .call-to-action{
@@ -10,6 +12,12 @@
     position: relative;
     color: var(--text-color);
     border-radius: 5px; 
+  }
+
+  @media (max-width: 420px){
+    .call-to-action{
+      background-position: left;
+    }
   }
 
   .call-to-action::before{

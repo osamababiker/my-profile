@@ -15,9 +15,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 3rem 7rem;
-    box-shadow: var(--box-shadow);
+    padding: 3rem 0rem;
     border-radius: 5px;
+}
+
+.testimonial p{
+    padding: 0 5rem;
 }
 
 .testimonial:hover{
@@ -47,12 +50,19 @@
     background: var(--yellow-color);
 }
 
-@media screen and (max-width: 480px){
+@media (max-width: 574px){
     .testimonial-wrapper{
-        padding: 0;
+        width: 90%;
+        margin: 0 5% auto;
     }
+}
+
+@media (max-width: 480px){
     .testimonial>img{
         width: 70px;
         height: 70px;
+    }
+    .testimonial p{
+        padding: 0 2rem;
     }
   }

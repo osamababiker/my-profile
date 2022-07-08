@@ -6,6 +6,7 @@
   --text-color: #777;
   --section-padding: 100px;
   --box-shadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --link-color: #0062e4;
 }
 /* End variables */
 
@@ -50,11 +51,6 @@
 
   .btn-main svg{
     color: var(--yellow-color);
-  }
-
-  .navbar-brand{
-    color: black;
-    font-weight: bold;
   }
 
   .navbar-brand img{

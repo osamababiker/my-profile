@@ -61,4 +61,13 @@
     max-width: 600px;
     margin: 25px 0px;
   }
+
+  @media (max-width: 764px){
+    .single-post img{
+      width: 100%;
+    }
+    .single-post iframe{
+      width: 100%;
+    }
+  }
   /* End single post */

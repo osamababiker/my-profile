@@ -5,7 +5,8 @@ import GlassesimojiIcon from '../../assets/images/icons/glasses.png';
 import HeartIcon from '../../assets/images/icons/heart.png';
 import HumbleEmojiIcon from '../../assets/images/icons/humble.png';
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
+import { Link } from 'react-scroll'; 
+import { Link as RouterLink } from 'react-router-dom';
 
 const Header = () => { 
 
@@ -15,12 +16,13 @@ const Header = () => {
     <header id='header'>
     <nav className="navbar sidebar-menu">
       <div className="container">
-        <a className="navbar-brand" href="/">
+        <RouterLink className="navbar-brand" to="/">
           <img
             src={Logo}
             alt=""
             width="30"
-            className="d-inline-block align-text-top rounded-circle"/> Osama M Babiker </a>
+            className="d-inline-block align-text-top rounded-circle"/> Osama M Babiker 
+          </RouterLink>
         <button
           className="btn-navbar-toggler btn"
           type="button"
@@ -31,7 +33,7 @@ const Header = () => {
         </button>
         <div
           className="offcanvas offcanvas-end"
-          tabindex="-1"
+          tabIndex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div className="offcanvas-header">

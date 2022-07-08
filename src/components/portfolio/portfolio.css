@@ -1,8 +1,4 @@
 .portfolio {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   text-align: left;
@@ -45,16 +41,30 @@
 }
 
 /* slider */
+
 .portfolio .swiper{
     overflow: visible!important;
 }
 
-.portfolio-slider {
+.portfolio img {
   width: 100%;
+  border-radius: 5px;
 }
 
-.portfolio img {
-  width: 19rem;
-  border-radius: 5px;
+.portfolio h4 {
+  text-transform: uppercase;
+  padding-top: 15px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.swiper-slide a{
+  text-decoration: none;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+  color: black;
+  font-weight: normal;
 }
 
