@@ -1,6 +1,7 @@
 import "./portfolio.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation} from 'swiper';
+import { useTranslation } from "react-i18next";
 import "swiper/css";
 import 'swiper/css/navigation';
 import { Link } from "react-router-dom";
@@ -11,10 +12,12 @@ import GlassesimojiIcon from '../../assets/images/icons/glassesimoji.png';
 
 const Portfolio = () => {
 
+  const { t } = useTranslation();
+
   return (
     <div className="portfolio" id="portfolio">
       <div className="container">
-        <h3>Some cool stuff <img src={GlassesimojiIcon} alt="Glasses imoji Icon" /> </h3>
+        <h3>{ t('portfolio_section_title') }<img src={GlassesimojiIcon} alt="Glasses imoji Icon" /> </h3>
         <Swiper
           modules={[Navigation]}
           navigation
@@ -30,15 +33,13 @@ const Portfolio = () => {
               slidesPerView: 2,
             },
           }}
-          className="portfolio-slider"
-        >
+          className="portfolio-slider">
           <SwiperSlide>
             <Link to='/posts/1'>
               <img src={Work1} alt="" />
               <h4> Keep kissing your product </h4>
             </Link>
           </SwiperSlide>
-          
           <SwiperSlide>
             <img src={Work2} alt="" />
             <h4> Timey project </h4>

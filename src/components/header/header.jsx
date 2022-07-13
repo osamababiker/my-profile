@@ -1,16 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-scroll'; 
+import { Link as RouterLink } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 import './header.css';
 import Logo from '../../assets/images/logo.jpeg';
 import GlassesimojiIcon from '../../assets/images/icons/glasses.png';
 import HeartIcon from '../../assets/images/icons/heart.png';
 import HumbleEmojiIcon from '../../assets/images/icons/humble.png';
-import { motion } from 'framer-motion';
-import { Link } from 'react-scroll'; 
-import { Link as RouterLink } from 'react-router-dom';
+
 
 const Header = () => { 
 
   const transition = { duration: 1, type: "spring", repeat: Infinity,  };
+  const { t } = useTranslation();
 
   return (
     <header id='header'>
@@ -21,7 +24,7 @@ const Header = () => {
             src={Logo}
             alt=""
             width="30"
-            className="d-inline-block align-text-top rounded-circle"/> Osama M Babiker 
+            className="d-inline-block align-text-top rounded-circle"/> { t('site_name') }
           </RouterLink>
         <button
           className="btn-navbar-toggler btn"
@@ -43,7 +46,7 @@ const Header = () => {
                 src={Logo}
                 alt=""
                 width="30"
-                className="d-inline-block align-text-top rounded-circle"/> Osama M Babiker 
+                className="d-inline-block align-text-top rounded-circle"/> { t('site_name') } 
             </Link>
             </h5>
             <button
@@ -56,33 +59,33 @@ const Header = () => {
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
                 <Link activeClass='active' className="nav-link active" to="header" spy={true} smooth={true}>
-                  Home
+                  { t('header_home_link') }
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link' to="services" spy={true} smooth={true}>
-                  What I do
+                  { t('header_services_link') }
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link' to="contact-me" spy={true} smooth={true}>
-                  Let Us Talk
+                  { t('header_contact_link') }
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link' to="portfolio" spy={true} smooth={true}>
-                  My Work
+                  { t('header_portfolio_link') }
                 </Link>
               </li>
             </ul>
             <address className="contact-info">
-              <span>Email: wow@osamababiker.com</span>
-              <span>Phone: +971525440487</span>
+              <span>{ t('sidebar_email_label') }: wow@osamababiker.com</span>
+              <span>{ t('sidebar_phone_label') }: +971525440487</span>
               <span>Abu Dhabi , UAE</span>
               <span>linkedin.com/in/osamambabiker</span>
             </address>
             <a download href="cv.pdf" className="btn side-menu-action">
-              My Resume <img src={HumbleEmojiIcon} alt="Humble imoji Icon" />
+              { t('sidebar_my_resume_button') } <img src={HumbleEmojiIcon} alt="Humble imoji Icon" />
             </a>
           </div>
         </div>
@@ -94,16 +97,14 @@ const Header = () => {
                whileInView={{ scale: 1.1 }}
                transition={transition}
             >
-              I Can Help You Build The <br />
-              <span> Next WOW  <img src={HeartIcon} alt="heart icon" /> . </span>
+              { t('home_landing_slogan_one') } <br />
+              <span> { t('home_landing_slogan_two') }  <img src={HeartIcon} alt="heart icon" /> . </span>
             </motion.h1>
             <p>
-              with thousands of soluations for every consumer problem , you need
-              more than digital product you need to build creative inovative wow
-              product
+              { t('home_landing_slogn_bio') }
             </p>
             <Link className='btn btn-main landing-contact-btn mt-4' to="contact-me" spy={true} smooth={true}>
-              Let us build your next wow <img src={GlassesimojiIcon} alt="" />
+              { t('home_landing_action_btn') } <img src={GlassesimojiIcon} alt="" />
             </Link>
         </div>
     </section>

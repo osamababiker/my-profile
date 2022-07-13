@@ -1,0 +1,52 @@
+{
+    "site_name": "أسامة محمد بابكر",
+
+    "header_home_link": "الرئيسية",
+    "header_services_link": "ماذا أبني",
+    "header_contact_link": "دعنا نتحدث",
+    "header_portfolio_link": "أشياء رائعة",
+    "sidebar_email_label": "ألايميل",
+    "sidebar_phone_label": "رقم الهاتف",
+    "sidebar_my_resume_button": "السيرة الذاتية",
+    "home_landing_slogan_one": "بمقدوري مساعدتك في بناء ",
+    "home_landing_slogan_two": "ابتكارك القادم",
+    "home_landing_slogn_bio": "مع وجود الآف الحلول لكل مشكلة ، فأنت بحاجة إلى أكثر من منتج رقمي , انت بحاجة لمنتج فريد ومبتكر",
+    "home_landing_action_btn": "لنبدأ في بناء ابتكارك القادم",
+
+    "services_section_title": "أنا أبني الابتكار فقط",
+    "services_section_bio_one": "لقد وصلنا بالفعل إلى مرحلة حيث هناك آلاف الخيارات لكل احتياج",
+    "services_section_bio_two": "في مثل هذه الأيام ، آخر ما يريد الناس رؤيته هو تطبيق أو موقع يدعي أنه يجعل العالم مكانًا أفضل",
+    "services_section_bio_three": "يمكنني مساعدتك في التعامل مع ذلك من خلال بناء حلول",
+    "services_section_bio_four": "جديدة",
+    "services_section_bio_five": "فريدة",
+    "services_section_bio_six": "مبتكرة",
+    "services_section_bio_seven": "واو",
+    "services_section_bio_eight": "حلول",
+    "services_section_app_box": "بناء تطبيقات",
+    "services_section_web_box": "تصميم مواقع",
+    "services_section_ideas_box": "أفكار",
+    "services_section_branding_box": "براندينج",
+
+    "call_to_action_section_title": "دعنا نتحدث عن ابتكارك القادم",
+    "call_to_action_section_bio": "لا تتردد في الاتصال بي حتى نتمكن من مناقشة ابتكاراتك التالية ، معًا يمكننا بناء أشياء رائعة",
+    "call_to_action_section_resume_link": "تحميل سيرتي الذاتية",
+    "call_to_action_section_contact_link": "دعنا نتحدث",
+
+    "portfolio_section_title": "بعض ألاشياء الرائعة",
+
+    "contact_section_title": "دعنا نتحدث عن أبتكارك القادم",
+    "contact_section_name_label": "ألاسم",
+    "contact_section_name_placeholder": "ما هو اسمك",
+    "contact_section_email_label": "ألايميل",
+    "contact_section_email_placeholder": "أدخل الايميل الخاص بك",
+    "contact_section_subject_label": "كيف يمكن ان أساعدك ؟",
+    "contact_section_subject_app_option": "بناء تطبيقك",
+    "contact_section_subject_web_option": "تصميم موقعك",
+    "contact_section_subject_idea_option": "أقتراح أفكار مشاريع",
+    "contact_section_subject_content_option": "كتابة محتوى لمواقع التواصل",
+    "contact_section_message_label": "رسالتك",
+    "contact_section_message_placeholder": "أخبرني كيف بمقدوري مساعدتك",
+    "contact_section_btn": "أرسل الرسالة",
+
+    "footer_section_copyright": "جميع الحقوق محفوظة"
+}

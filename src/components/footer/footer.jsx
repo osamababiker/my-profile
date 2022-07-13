@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 import './footer.css';
 import Logo from '../../assets/images/logo.jpeg';
 
 const Footer = () => {
+
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
         <div className="container">
@@ -12,7 +16,7 @@ const Footer = () => {
                 <i className="fab fa-twitter"></i>
                 <i className="fab fa-linkedin"></i>
             </div>
-            <p className="copyright">All Right Recived <span> Osama Mohammed Babiker &copy; 2022</span> </p>
+            <p className="copyright"> { t('footer_section_copyright') } <span> { t('site_name') } &copy; 2022</span> </p>
         </div>
     </footer>
   );

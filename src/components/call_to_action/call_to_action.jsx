@@ -1,20 +1,24 @@
 import React from 'react';
+import { Link } from 'react-scroll';
+import { useTranslation } from "react-i18next";
 import './call_to_action.css';
 import HeartEmojiIcon from '../../assets/images/icons/heartemoji.png';
 import HumbleEmojiIcon from '../../assets/images/icons/humble.png';
-import { Link } from 'react-scroll';
 
 const CallToAction = () => {
+
+    const { t } = useTranslation();
+
     return (
         <section className="call-to-action container" id="">
             <div className="p-5">
-            <h3> Let us talk your next innovation </h3>
-            <p> feal free to contact me so we can discuss your next innovation ,  together we can build wow things </p>
+            <h3> { t('call_to_action_section_title') } </h3>
+            <p> { t('call_to_action_section_bio') } </p>
             <div className="actions"> 
                 <Link style={{ cursor: 'pointer' }} to="contact-me" className='btn'>
-                    Let us talk  <img src={HeartEmojiIcon} alt="Heart Emoji Icon" /> 
+                    { t('call_to_action_section_contact_link') }  <img src={HeartEmojiIcon} alt="Heart Emoji Icon" /> 
                 </Link>
-                <a download className="btn" href="cv.pdf">Download my Resume <img src={HumbleEmojiIcon} alt="Humble imoji Icon" /></a>
+                <a download className="btn" href="cv.pdf"> { t('call_to_action_section_resume_link') } <img src={HumbleEmojiIcon} alt="Humble imoji Icon" /></a>
             </div>
             </div>
         </section>

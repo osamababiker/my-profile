@@ -1,0 +1,52 @@
+{
+    "site_name": "Osama M Babiker",
+    
+    "header_home_link": "Home",
+    "header_services_link": "What I do",
+    "header_contact_link": "Let Us Talk",
+    "header_portfolio_link": "Cool Stuff",
+    "sidebar_email_label": "Email",
+    "sidebar_phone_label": "Phone",
+    "sidebar_my_resume_button": "My Resume",
+    "home_landing_slogan_one": "I Can Help You Build The",
+    "home_landing_slogan_two": "Next WOW",
+    "home_landing_slogn_bio": "with thousands of soluations for every consumer problem , you need more than digital product you need to build creative inovative wow product",
+    "home_landing_action_btn": "Let us build your next wow",
+
+    "services_section_title": "I Build innovation Only",
+    "services_section_bio_one": "We already reach the point where people have thousands of choices for every single need",
+    "services_section_bio_two": "In such a days the last things people want to see is an app or website claims to make the world a better place",
+    "services_section_bio_three": "I can help you deal with that by building",
+    "services_section_bio_four": "new",
+    "services_section_bio_five": "creative",
+    "services_section_bio_six": "innovative",
+    "services_section_bio_seven": "WOW",
+    "services_section_bio_eight": "solutions",
+    "services_section_app_box": "Mobile Apps",
+    "services_section_web_box": "Design website",
+    "services_section_ideas_box": "ideas",
+    "services_section_branding_box": "Branding",
+
+    "call_to_action_section_title": "Let us talk your next innovation",
+    "call_to_action_section_bio": "feal free to contact me so we can discuss your next innovation ,  together we can build wow things",
+    "call_to_action_section_resume_link": "Download my Resume",
+    "call_to_action_section_contact_link": "Let us talk",
+
+    "portfolio_section_title": "Some cool stuff",
+
+    "contact_section_title": "Let us talk innovation",
+    "contact_section_name_label": "Your Name",
+    "contact_section_name_placeholder": "What is your name",
+    "contact_section_email_label": "Your email",
+    "contact_section_email_placeholder": "Enter your email",
+    "contact_section_subject_label": "How i can help you ?",
+    "contact_section_subject_app_option": "Build your app",
+    "contact_section_subject_web_option": "Design your website",
+    "contact_section_subject_idea_option": "Provide business ideas",
+    "contact_section_subject_content_option": "Write you social media content",
+    "contact_section_message_label": "Your message",
+    "contact_section_message_placeholder": "Tell me more how i can help you",
+    "contact_section_btn": "Send Message",
+
+    "footer_section_copyright": "All Right Recived"
+}
