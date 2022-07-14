@@ -1,4 +1,4 @@
-import "./portfolio.css";
+import "./posts.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation} from 'swiper';
 import { useTranslation } from "react-i18next";
@@ -6,15 +6,29 @@ import cookies from 'js-cookie';
 import "swiper/css";
 import 'swiper/css/navigation';
 import { Link } from "react-router-dom";
-import Work1 from '../../assets/images/work/01.jpg';
-import Work2 from '../../assets/images/work/02.jpg';
-import Work3 from '../../assets/images/work/03.jpg';
 import GlassesimojiIcon from '../../assets/images/icons/glassesimoji.png';
+import { useEffect, useState } from "react";
 
-const Portfolio = () => {
+const Posts = () => {
 
+  const [posts , setPosts] = useState([]);
   const { t } = useTranslation();
   const currentLangCode = cookies.get('i18next') || 'en';
+
+  const fetchPosts = async () => {
+    const response = await fetch('http://127.0.0.1:8000/api/posts');
+    const data = await response.json();
+    return data;
+  }
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const posts = await fetchPosts();
+      setPosts(posts);
+    }
+    getPosts();
+  }, []);
+
 
   return (
     <div className="portfolio" id="portfolio" dir={currentLangCode === 'ar' ? 'ltr' : ''}>
@@ -36,28 +50,18 @@ const Portfolio = () => {
             },
           }}
           className="portfolio-slider">
-          <SwiperSlide>
-            <Link to='/posts/1'>
-              <img src={Work1} alt="" />
-              <h4> Keep kissing your product </h4>
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Work2} alt="" />
-            <h4> Timey project </h4>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Work3} alt="" />
-            <h4> Bsklita </h4>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Work1} alt="" />
-            <h4> feature creep </h4>
-          </SwiperSlide>
+            {posts.map((post) => (
+              <SwiperSlide key={post.id}>
+                <Link to={`/posts/${post.id}`}>
+                  <img src={`http://127.0.0.1:8000/upload/posts/${post.poster}`} alt={post.enTitle} />
+                  <h4> {post.enTitle} </h4>
+                </Link>
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </div>
   );
 };
 
-export default Portfolio;
+export default Posts;

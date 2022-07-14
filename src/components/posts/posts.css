@@ -1,7 +1,7 @@
 .portfolio {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  text-align: left;
+  text-align: center;
 }
 
 .portfolio h3{
@@ -38,6 +38,7 @@
 
 .portfolio h3 img{
   width: 60px;
+  height: 60px;
 }
 
 /* slider */
@@ -47,7 +48,8 @@
 }
 
 .portfolio img {
-  width: 100%;
+  width: 200px;
+  height: 200px;
   border-radius: 5px;
 }
 
