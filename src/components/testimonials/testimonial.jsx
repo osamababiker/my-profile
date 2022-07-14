@@ -1,16 +1,19 @@
 import React from "react";
-import "./testimonial.css";
+import cookies from 'js-cookie';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
 import { Pagination } from "swiper";
 import "swiper/css/pagination";
 import profilePic1 from "../../assets/images/profile1.jpg";
 import profilePic2 from "../../assets/images/profile2.jpg";
 import profilePic3 from "../../assets/images/profile3.jpg";
 import profilePic4 from "../../assets/images/profile4.jpg";
+import "./testimonial.css";
 
 const Testimonial = () => {
+
+  const currentLangCode = cookies.get('i18next') || 'en';
+
   const clients = [
     {
       img: profilePic1,
@@ -35,7 +38,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="container testimonial-wrapper" id="testimonial"> 
+    <div className="container testimonial-wrapper" id="testimonial"  dir={currentLangCode === 'ar' ? 'ltr' : ''}> 
       <Swiper
         // install Swiper modules
         modules={[Pagination]}

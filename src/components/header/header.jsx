@@ -3,17 +3,48 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll'; 
 import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
+import i18next from 'i18next';
+import cookies from 'js-cookie';
+import { useEffect } from 'react';
+import 'flag-icon-css/css/flag-icons.min.css';
 import './header.css';
 import Logo from '../../assets/images/logo.jpeg';
 import GlassesimojiIcon from '../../assets/images/icons/glasses.png';
 import HeartIcon from '../../assets/images/icons/heart.png';
 import HumbleEmojiIcon from '../../assets/images/icons/humble.png';
+import GlobeIcon from "@iconscout/react-unicons/icons/uil-globe";
 
 
 const Header = () => { 
 
   const transition = { duration: 1, type: "spring", repeat: Infinity,  };
   const { t } = useTranslation();
+  
+  const languages = [
+    {
+      code: 'en',
+      name: 'English',
+      country_code: 'gb',
+      dir: 'ltr'
+    },
+    { 
+      code: 'ar',
+      name: 'العربية',
+      country_code: 'sa',
+      dir: 'rtl'
+    },
+  ];
+
+  const currentLangCode = cookies.get('i18next') || 'en';
+  const currentLang = languages.find(lang => lang.code === currentLangCode);
+
+  useEffect(() => {
+    document.body.dir = currentLang.dir;
+    if(currentLang.code === 'ar')  
+      document.body.style.fontFamily = 'Tajawal, sans-serif';
+    else 
+      document.body.style.fontFamily = 'Roboto, sans-serif';
+  }, [currentLang]);
 
   return (
     <header id='header'>
@@ -25,7 +56,7 @@ const Header = () => {
             alt=""
             width="30"
             className="d-inline-block align-text-top rounded-circle"/> { t('site_name') }
-          </RouterLink>
+        </RouterLink>
         <button
           className="btn-navbar-toggler btn"
           type="button"
@@ -59,7 +90,7 @@ const Header = () => {
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
                 <Link activeClass='active' className="nav-link active" to="header" spy={true} smooth={true}>
-                  { t('header_home_link') }
+                  { t('header_home_link') } 
                 </Link>
               </li>
               <li className="nav-item">
@@ -77,6 +108,20 @@ const Header = () => {
                   { t('header_portfolio_link') }
                 </Link>
               </li>
+              <div className="dropdown">
+                <button className="btn btn-link dropdown-toggle" style={{ color: "var(--text-color)" }} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <GlobeIcon  />
+                </button>
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  {languages.map(({code, name, country_code}) => (
+                    <li key={country_code}>
+                      <button onClick={() => i18next.changeLanguage(code)} className="dropdown-item" > 
+                        <span className={`flag-icon flag-icon-${country_code}`}></span> {name}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </ul>
             <address className="contact-info">
               <span>{ t('sidebar_email_label') }: wow@osamababiker.com</span>

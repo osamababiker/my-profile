@@ -2,6 +2,7 @@ import "./portfolio.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation} from 'swiper';
 import { useTranslation } from "react-i18next";
+import cookies from 'js-cookie';
 import "swiper/css";
 import 'swiper/css/navigation';
 import { Link } from "react-router-dom";
@@ -13,9 +14,10 @@ import GlassesimojiIcon from '../../assets/images/icons/glassesimoji.png';
 const Portfolio = () => {
 
   const { t } = useTranslation();
+  const currentLangCode = cookies.get('i18next') || 'en';
 
   return (
-    <div className="portfolio" id="portfolio">
+    <div className="portfolio" id="portfolio" dir={currentLangCode === 'ar' ? 'ltr' : ''}>
       <div className="container">
         <h3>{ t('portfolio_section_title') }<img src={GlassesimojiIcon} alt="Glasses imoji Icon" /> </h3>
         <Swiper

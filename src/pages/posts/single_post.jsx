@@ -1,17 +1,50 @@
 import React from 'react';
-import Logo from '../../assets/images/logo.jpeg';
-import WorkImg from '../../assets/images/work/01.jpg';
-import HumbleEmojiIcon from '../../assets/images/icons/humble.png';
 import { Link } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
+import i18next from 'i18next';
+import cookies from 'js-cookie';
+import { useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 import './single_post.css';
 import Work from '../../assets/images/work/01.jpg';
 import Contact from '../../components/contact/contact';
 import Footer from '../../components/footer/footer';
+import Logo from '../../assets/images/logo.jpeg';
+import WorkImg from '../../assets/images/work/01.jpg';
+import HumbleEmojiIcon from '../../assets/images/icons/humble.png';
+import GlobeIcon from "@iconscout/react-unicons/icons/uil-globe";
 
-const SinglePost = () => {
-  return (
-    <>
+const SinglePost = () => { 
+
+    const { t } = useTranslation();
+    const languages = [
+        {
+            code: 'en',
+            name: 'English',
+            country_code: 'gb',
+            dir: 'ltr'
+        },
+        { 
+            code: 'ar',
+            name: 'العربية',
+            country_code: 'sa',
+            dir: 'rtl'
+        },
+        ];
+
+        const currentLangCode = cookies.get('i18next') || 'en';
+        const currentLang = languages.find(lang => lang.code === currentLangCode);
+
+        useEffect(() => {
+        document.body.dir = currentLang.dir;
+        if(currentLang.code === 'ar')  
+            document.body.style.fontFamily = 'Tajawal, sans-serif';
+        else 
+            document.body.style.fontFamily = 'Roboto, sans-serif';
+        }, [currentLang]);
+      
+    return (
+        <>
         <header>
         <nav className="navbar sidebar-menu">
             <div className="container">
@@ -20,7 +53,7 @@ const SinglePost = () => {
                     src={Logo}
                     alt=""
                     width="30"
-                    className="d-inline-block align-text-top rounded-circle"/> Osama M Babiker 
+                    className="d-inline-block align-text-top rounded-circle"/> { t('site_name') } 
                 </RouterLink>
                 <button
                 className="btn-navbar-toggler btn"
@@ -42,7 +75,7 @@ const SinglePost = () => {
                         src={Logo}
                         alt=""
                         width="30"
-                        className="d-inline-block align-text-top rounded-circle"/> Osama M Babiker 
+                        className="d-inline-block align-text-top rounded-circle"/> { t('site_name') }
                     </RouterLink>
                     </h5>
                     <button
@@ -55,33 +88,47 @@ const SinglePost = () => {
                     <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li className="nav-item">
                         <RouterLink  className="nav-link active" to="/">
-                            Home
+                            { t('header_home_link') } 
                         </RouterLink>
                     </li>
                     <li className="nav-item">
                         <RouterLink className='nav-link' to="/#services">
-                            What I do
+                            { t('header_services_link') }
                         </RouterLink>
                     </li>
                     <li className="nav-item">
                         <Link className='nav-link' to="contact-me" spy={true} smooth={true}>
-                            Let Us Talk
+                            { t('header_contact_link') }
                         </Link>
                     </li>
                     <li className="nav-item">
                         <RouterLink className='nav-link' to="/#portfolio">
-                            My Work
+                            { t('header_portfolio_link') }
                         </RouterLink>
                     </li>
+                    <div className="dropdown">
+                        <button className="btn btn-link dropdown-toggle" style={{ color: "var(--text-color)" }} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <GlobeIcon  />
+                        </button>
+                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        {languages.map(({code, name, country_code}) => (
+                            <li key={country_code}>
+                            <button onClick={() => i18next.changeLanguage(code)} className="dropdown-item" > 
+                                <span className={`flag-icon flag-icon-${country_code}`}></span> {name}
+                            </button>
+                            </li>
+                        ))}
+                        </ul>
+                    </div>
                     </ul>
                     <address className="contact-info">
-                    <span>Email: wow@osamababiker.com</span>
-                    <span>Phone: +971525440487</span>
+                    <span>{ t('sidebar_email_label') }: wow@osamababiker.com</span>
+                    <span>{ t('sidebar_phone_label') }: +971525440487</span>
                     <span>Abu Dhabi , UAE</span>
                     <span>linkedin.com/in/osamambabiker</span>
                     </address>
                     <a download href="cv.pdf" className="btn side-menu-action">
-                        My Resume <img src={HumbleEmojiIcon} alt="Humble imoji Icon" />
+                        { t('sidebar_my_resume_button') } <img src={HumbleEmojiIcon} alt="Humble imoji Icon" />
                     </a>
                 </div>
                 </div>
@@ -91,7 +138,7 @@ const SinglePost = () => {
         <section className="container post-cover" id="post-cover">
             <img src={WorkImg} alt="post" />
         </section>
-      </header>
+    </header>
 
         <section className="single-post container">
         <div className="content">
@@ -123,12 +170,10 @@ const SinglePost = () => {
                 It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
         </div>
-      </section>
-      <Contact />
-      <Footer />
+    </section>
+    <Contact />
+    <Footer />
     </>
-    
-    
   )
 }
 
