@@ -16,7 +16,12 @@ const Posts = () => {
   const currentLangCode = cookies.get('i18next') || 'en';
 
   const fetchPosts = async () => {
-    const response = await fetch('http://127.0.0.1:8000/api/posts');
+    const response = await fetch('http://127.0.0.1:8000/api/posts', {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    });
     const data = await response.json();
     return data;
   }
